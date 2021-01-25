@@ -1,0 +1,259 @@
+/* .h-100{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.pelota{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: 1s;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+}
+
+.pelota.a{
+    background: red;
+    left: 0;    
+}
+.pelota.b{
+    background: blue;
+    right: 0;    
+}
+
+.canasta{
+    position: relative;
+    border: 1px solid red;
+    height: 100px;
+    width: 100%;
+    transform: rotate(45deg) skew(10deg) translate(100px) scale(0.7);
+}
+
+.canasta:hover .pelota.a{
+    left: calc(50% - 100px);
+}
+.canasta:hover .pelota.b{
+    right: calc(50% - 100px);
+} 
+ */
+
+/*  transition-property: width,height;
+    transition-delay: 1s;
+    transition-duration: 1s;
+    transition-timing-function: ease; 
+*/
+
+
+
+
+
+
+
+/* CUADRADOS */
+
+/*  .main{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     color: white;
+     font-family: Arial, Helvetica, sans-serif;
+ }
+
+
+ .contenedor{
+     display: flex;
+     justify-content: space-between;
+     border: 1px solid red;
+ }
+
+.contenedor:hover .cuadrado.a{
+    transform: rotate(-45deg);
+}
+
+.contenedor:hover .cuadrado.b{
+    transform: rotateX(-90deg);
+}
+
+.contenedor:hover .cuadrado.c{
+    transform: rotateY(-90deg);
+}
+
+.contenedor:hover .cuadrado.d{
+    transform: rotate(45deg);
+}
+
+.contenedor:hover .cuadrado.e{
+    transform: rotateX(90deg) rotateY(90deg) rotateZ(90deg);
+}
+
+.contenedor:hover .cuadrado.f{
+    transform: rotate3d(1 , 1, 0, 90deg);
+}
+
+ .cuadrado{
+     width: 150px;
+     height: 150px;
+     background-color: yellowgreen;
+     transition: 0.5s;
+     margin: 20px;
+     display: flex;
+     justify-content: center;
+     align-items:center;
+     object-fit: contain;
+     text-align: center;
+ }
+
+
+ .contenedorPerspectiva:hover .perspectiva{
+    transform: translate3d(100px, 100px, -100px);
+ }
+
+ .contenedorPerspectiva{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+    perspective: 100px;
+}
+
+ .perspectiva{
+     width: 150px;
+     height: 150px;
+     background-color: yellowgreen;
+     transition: 0.5s;
+     margin: 20px;
+     display: flex;
+     justify-content: center;
+     align-items:center;
+ }
+ */
+
+
+
+
+ /* TERCER EJEMPLO */
+/* .main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedor{
+    display: flex;
+    justify-content: center;
+    border: 1px solid red;
+}
+
+.cuadrado{
+    width: 150px;
+    height: 150px;
+    background-color: yellowgreen;
+    transition: 1s;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    object-fit: contain;
+    text-align: center;
+}
+.a{
+    transform-origin: top;
+}
+.b{
+    transform-origin: left;
+}
+.c{
+    transform-origin: left;
+}
+.d{
+    transform-origin: right;
+}
+.e{
+    transform-origin: top;
+}
+.f{
+    transform-origin: right top;
+}
+.contenedor:hover .cuadrado.a{
+    transform: rotateX(45deg);
+}
+.contenedor:hover .cuadrado.b{
+    
+    transform: rotateY(45deg);
+}
+.contenedor:hover .cuadrado.c{
+    
+    transform: rotateY(-75deg);
+}
+.contenedor:hover .cuadrado.d{
+    
+    transform: rotateY(75deg);
+}
+.contenedor:hover .cuadrado.e{
+    
+    transform: rotateX(180deg);
+}
+.contenedor:hover .cuadrado.f{
+    
+    transform: rotateZ(45deg);
+} */
+
+/* CUARTO EJEMPLO */
+
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedor{
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    border: 1px solid red;
+}
+
+.circulo{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: yellowgreen;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    object-fit: contain;
+    text-align: center;
+    animation-name: circulo;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    position: relative;
+}
+
+@keyframes circulo {
+    0%{
+        left: 0;
+        transform:rotateZ(0deg) ;
+    }
+    100%{
+        left: calc(100% - 240px);
+        transform:rotateZ(720deg) ;
+    }
+}
+
+.contenedor:hover .circulo{
+    animation-play-state: paused;
+}
